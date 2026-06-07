@@ -1,0 +1,87 @@
+\coordinate (00) at (1, 0);
+\coordinate (40) at (4, 1);
+\coordinate (44) at (5, 3.5);
+\coordinate (04) at (0, 4);
+\coordinate (02) at ($(00)!0.50!(04)$);
+\coordinate (42) at ($(40)!0.50!(44)$);
+
+\coordinate (11) at ($(10)!0.25!(14)$);
+\coordinate (12) at ($(10)!0.50!(14)$);
+\coordinate (13) at ($(10)!0.75!(14)$);
+\coordinate (21) at ($(20)!0.25!(24)$);
+\coordinate (22) at ($(20)!0.50!(24)$);
+\coordinate (23) at ($(20)!0.75!(24)$);
+\coordinate (31) at ($(30)!0.25!(34)$);
+\coordinate (32) at ($(30)!0.50!(34)$);
+\coordinate (33) at ($(30)!0.75!(34)$);
+
+\coordinate (A00) at (02);
+\coordinate (A02) at (04);
+\coordinate (A100) at (42);
+\coordinate (A102) at (44);
+
+\coordinate (A10) at ($(A00)!0.1!(A100)$);
+\coordinate (A20) at ($(A00)!0.2!(A100)$);
+\coordinate (A30) at ($(A00)!0.3!(A100)$);
+\coordinate (A40) at ($(A00)!0.4!(A100)$);
+\coordinate (A50) at ($(A00)!0.5!(A100)$);
+\coordinate (A60) at ($(A00)!0.6!(A100)$);
+\coordinate (A70) at ($(A00)!0.7!(A100)$);
+\coordinate (A80) at ($(A00)!0.8!(A100)$);
+\coordinate (A90) at ($(A00)!0.9!(A100)$);
+\coordinate (A12) at ($(A02)!0.1!(A102)$);
+\coordinate (A22) at ($(A02)!0.2!(A102)$);
+\coordinate (A32) at ($(A02)!0.3!(A102)$);
+\coordinate (A42) at ($(A02)!0.4!(A102)$);
+\coordinate (A52) at ($(A02)!0.5!(A102)$);
+\coordinate (A62) at ($(A02)!0.6!(A102)$);
+\coordinate (A72) at ($(A02)!0.7!(A102)$);
+\coordinate (A82) at ($(A02)!0.8!(A102)$);
+\coordinate (A92) at ($(A02)!0.9!(A102)$);
+
+\coordinate (A01) at ($(A00)!0.5!(A02)$);
+\coordinate (A41) at ($(A40)!0.5!(A42)$);
+\coordinate (A61) at ($(A60)!0.5!(A62)$);
+\coordinate (A101) at ($(A100)!0.5!(A102)$);
+
+\coordinate (A11) at ($(A01)!0.1!(A101)$);
+\coordinate (A21) at ($(A01)!0.2!(A101)$);
+\coordinate (A31) at ($(A01)!0.3!(A101)$);
+\coordinate (A51) at ($(A01)!0.5!(A101)$);
+\coordinate (A71) at ($(A01)!0.7!(A101)$);
+\coordinate (A81) at ($(A01)!0.8!(A101)$);
+\coordinate (A91) at ($(A01)!0.9!(A101)$);
+
+\fill[red!20] (A00) -- (A01) -- (A11) -- (A10);
+\fill[red!20] (A91) -- (A101) -- (A102) -- (A92);
+\fill[blue!20] (A01) -- (A02) -- (A12) -- (A11);
+\fill[blue!20] (A90) -- (A100) -- (A101) -- (A91);
+
+\draw (A00) -- (A40);
+\draw (A01) -- (A41);
+\draw (A02) -- (A42);
+\draw (A60) -- (A100);
+\draw (A61) -- (A101);
+\draw (A62) -- (A102);
+\draw (A00) -- (A02);
+\draw (A10) -- (A12);
+\draw (A20) -- (A22);
+\draw (A30) -- (A32);
+\draw (A70) -- (A72);
+\draw (A80) -- (A82);
+\draw (A90) -- (A92);
+\draw (A100) -- (A102);
+
+\node at (barycentric cs:A00=1,A01=1,A10=1,A11=1) {$L_1$};
+\node at (barycentric cs:A10=1,A11=1,A20=1,A21=1) {$L_2$};
+\node at (barycentric cs:A20=1,A21=1,A30=1,A31=1) {$L_3$};
+\node at (barycentric cs:A01=1,A02=1,A11=1,A12=1) {$U_1$};
+\node at (barycentric cs:A11=1,A12=1,A21=1,A22=1) {$U_2$};
+\node at (barycentric cs:A21=1,A22=1,A31=1,A32=1) {$U_3$};
+\node at (barycentric cs:A70=1,A71=1,A80=1,A81=1) {$L_{n-2}$};
+\node at (barycentric cs:A80=1,A81=1,A90=1,A91=1) {$L_{n-1}$};
+\node at (barycentric cs:A90=1,A91=1,A100=1,A101=1) {$L_n$};
+\node at (barycentric cs:A71=1,A72=1,A81=1,A82=1) {$U_{n-2}$};
+\node at (barycentric cs:A81=1,A82=1,A91=1,A92=1) {$U_{n-1}$};
+\node at (barycentric cs:A91=1,A92=1,A101=1,A102=1) {$U_n$};
+\node at (A51) {$\dots$};

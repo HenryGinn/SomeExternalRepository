@@ -1,0 +1,33 @@
+\documentclass[11 pt]{article}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{tikz}
+
+\let\origsection=\section
+\let\origsubsection=\subsection
+\let\origsubsubsection=\subsubsection
+\renewcommand\section[1]{\origsection{#1}\label{#1}}
+\renewcommand\subsection[1]{\origsubsection{#1}\label{#1}}
+\renewcommand\subsubsection[1]{\origsubsubsection{#1}\label{#1}}
+
+\begin{document}
+
+This is an example document to demonstrate cross-referencing across documents.
+
+\section{Example Section}
+
+\lipsum[1]
+
+\subsection{Example Subsection}
+
+\lipsum[1]
+
+\begin{figure}[H]
+	\begin{tikzpicture}[scale=2.5]
+		\input{ExampleFigure.tikz}
+	\end{tikzpicture}
+	\caption[Example figure]{This is an example figure I borrowed from my puzzle log.}
+	\label{fig:ExampleFigure}
+\end{figure}
+
+\end{document}
