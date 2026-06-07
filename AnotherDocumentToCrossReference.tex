@@ -1,7 +1,9 @@
 \documentclass[11 pt]{article}
+\usepackage[a4paper, top=12.7mm, bottom=25.4mm, left=19.1mm, right=19.1mm, footskip=8mm]{geometry}
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 
 \let\origsection=\section
 \let\origsubsection=\subsection
@@ -10,7 +12,12 @@
 \renewcommand\subsection[1]{\origsubsection{#1}\label{#1}}
 \renewcommand\subsubsection[1]{\origsubsubsection{#1}\label{#1}}
 
+\title{Another Document To Cross Reference}
+\author{Henry Ginn}
+
 \begin{document}
+
+\maketitle
 
 This is an example document to demonstrate cross-referencing across documents.
 
@@ -20,13 +27,14 @@ This is an example document to demonstrate cross-referencing across documents.
 
 \subsection{Example Subsection}
 
-\lipsum[1]
+\lipsum[2]
 
 \begin{figure}[H]
+	\centering
 	\begin{tikzpicture}[scale=2.5]
 		\input{ExampleFigure.tikz}
 	\end{tikzpicture}
-	\caption[Example figure]{This is an example figure I borrowed from my puzzle log.}
+	\caption[Example figure]{This is an example figure that I borrowed from my log of puzzles.}
 	\label{fig:ExampleFigure}
 \end{figure}
 

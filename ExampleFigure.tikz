@@ -2,8 +2,19 @@
 \coordinate (40) at (4, 1);
 \coordinate (44) at (5, 3.5);
 \coordinate (04) at (0, 4);
+
+\coordinate (10) at ($(00)!0.25!(40)$);
+\coordinate (20) at ($(00)!0.50!(40)$);
+\coordinate (30) at ($(00)!0.75!(40)$);
+\coordinate (14) at ($(04)!0.25!(44)$);
+\coordinate (24) at ($(04)!0.50!(44)$);
+\coordinate (34) at ($(04)!0.75!(44)$);
+\coordinate (01) at ($(00)!0.25!(04)$);
 \coordinate (02) at ($(00)!0.50!(04)$);
+\coordinate (03) at ($(00)!0.75!(04)$);
+\coordinate (41) at ($(40)!0.25!(44)$);
 \coordinate (42) at ($(40)!0.50!(44)$);
+\coordinate (43) at ($(40)!0.75!(44)$);
 
 \coordinate (11) at ($(10)!0.25!(14)$);
 \coordinate (12) at ($(10)!0.50!(14)$);
