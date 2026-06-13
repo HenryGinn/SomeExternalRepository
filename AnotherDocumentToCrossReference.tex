@@ -14,14 +14,6 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
-% Automatically adding labels to headings so they can be cross-referenced.
-\let\origsection=\section
-\let\origsubsection=\subsection
-\let\origsubsubsection=\subsubsection
-\renewcommand\section[1]{\origsection{#1}\label{#1}}
-\renewcommand\subsection[1]{\origsubsection{#1}\label{#1}}
-\renewcommand\subsubsection[1]{\origsubsubsection{#1}\label{#1}}
-
 \title{Another Document To Cross Reference}
 \author{Henry Ginn}
 
@@ -42,12 +34,15 @@
 This is an example document used to demonstrate how it is possible to cross-reference across documents using a combination of \LaTeX\ and Git submodule.
 
 \section{Example Section The First}
+\label{sec:ExampleSectionTheFirst}
 
 This is an empty included only to show that the following subsection number is correct when it is cross-referenced.
 
 \section{Example Section The Second}
+\label{sec:ExampleSectionTheSecond}
 
 \subsection{Example Subsection}
+\label{subsec:ExampleSubsection}
 
 \begin{figure}[H]
 	\centering
