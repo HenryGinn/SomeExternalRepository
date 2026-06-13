@@ -1,5 +1,15 @@
+\DocumentMetadata{
+	testphase={phase-III, math},
+	tagging=on,
+	tagging-setup={math/setup=mathml-SE},
+	pdfstandard=ua-2,
+	pdfversion=2.0,
+	lang=en
+}
+
 \documentclass[11 pt]{article}
 \usepackage[a4paper, top=12.7mm, bottom=25.4mm, left=19.1mm, right=19.1mm, footskip=8mm]{geometry}
+\usepackage{hyperref}
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{tikz}
@@ -18,21 +28,33 @@
 
 \begin{document}
 
+\def\title{Another Document To Cross-Reference}
+\def\author{Henry Ginn}
+
+\hypersetup{
+	pdftitle={\title},
+	pdfauthor={\author},
+	pdfkeywords={Example},
+	pdfdisplaydoctitle=true
+}
+
 \maketitle
 
-This is an example document to demonstrate cross-referencing across documents.
+This is an example document used to demonstrate how it is possible to cross-reference across documents using a combination of \LaTeX\ and Git submodule.
 
-\section{Example Section}
+\section{Example Section The First}
 
-\lipsum[1]
+This is an empty included only to show that the following subsection number is correct when it is cross-referenced.
+
+\section{Example Section The Second}
 
 \subsection{Example Subsection}
 
-\lipsum[2]
+\lipsum[1]
 
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}[scale=2.5]
+	\begin{tikzpicture}[scale=2.5, alt={A distorted grid with labelled cells and with some cells highlighted.}]
 		\input{ExampleFigure.tikz}
 	\end{tikzpicture}
 	\caption[Example figure]{This is an example figure that I borrowed from my log of puzzles.}

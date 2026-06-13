@@ -1,6 +1,2 @@
-*.aux
-*.log
-*.out
-*.ptc
-*.gz
+build
 AnotherDocumentToCrossReference.pdf
